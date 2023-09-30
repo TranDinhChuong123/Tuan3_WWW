@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="Tuan2">
+<!--        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
+        <class>tuan2.edu.models.Customer</class>
+        <class>tuan2.edu.models.Employee</class>
+        <class>tuan2.edu.models.OderDetail</class>
+        <class>tuan2.edu.models.Order</class>
+        <class>tuan2.edu.models.Product</class>
+        <class>tuan2.edu.models.ProductPrice</class>
+        <class>tuan2.edu.models.ProductImage</class>
+        <class>tuan2.edu.models.Customer</class>
+        <class>tuan2.edu.models.primaryKeys.OrderDetail_ID</class>
+
+        <properties>
+
+            <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/tuan2" />
+            <property name="jakarta.persistence.jdbc.user" value="root" />
+            <property name="jakarta.persistence.jdbc.password" value="123456" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDB103Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+
+    </persistence-unit>
+</persistence>
